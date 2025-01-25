@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Playback Speed",
+  "version": "1.0",
+  "description": "Shows the current playback speed of a YouTube video.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "32": "icons/icons32.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
+

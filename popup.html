@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Playback Speed</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+      margin: 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #0073e6;
+    }
+    #speed {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    input[type="text"] {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: border-color 0.3s;
+    }
+    input[type="text"]:focus {
+      border-color: #0073e6;
+      outline: none;
+    }
+    button {
+      padding: 10px;
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+  <h1>Playback Speed</h1>
+  <div id="speed">Loading...</div>
+  <form id="shortcut-form">
+    <label for="shortcut-1">Speed Up</label>
+    <input type="text" name="shortcut-1" id="shortcut-1">
+    
+    <label for="shortcut-2">Speed Down</label>
+    <input type="text" name="shortcut-2" id="shortcut-2">
+    
+    <label for="shortcut-3">Toggle Picture-in-Picture</label>
+    <input type="text" name="shortcut-3" id="shortcut-3">
+    
+    <label for="shortcut-4">Toggle Suggestions</label>
+    <input type="text" name="shortcut-4" id="shortcut-4">
+    
+    <button type="button" id="form-submit-button">Save Shortcuts</button>
+  </form>
+  <script src="popup.js"></script>
+</body>
+</html>
