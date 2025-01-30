@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Made Easy</title>
+  <style>
+    body {
+      font-family: 'Roboto', 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
+      padding: 16px;
+      margin: 0;
+      width: 280px;
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 16px;
+      text-align: center;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    h1::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-color: #ff0000;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z'/%3E%3C/svg%3E");
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z'/%3E%3C/svg%3E");
+    }
+
+    #speed {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #f1f1f1;
+      background: #272727;
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .input-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #272727;
+      padding: 12px;
+      border-radius: 8px;
+      transition: background-color 0.2s;
+    }
+
+    .input-container:hover {
+      background: #383838;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      color: #f1f1f1;
+    }
+
+    input[type="text"] {
+      width: 40px;
+      padding: 8px;
+      text-align: center;
+      background-color: #0f0f0f;
+      border: 1px solid #383838;
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    input[type="text"]:focus {
+      border-color: #3ea6ff;
+      outline: none;
+      background-color: #000000;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #3ea6ff;
+      color: #0f0f0f;
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s;
+      margin-top: 8px;
+    }
+
+    button:hover {
+      background-color: #65b8ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>YouTube Controls</h1>
+  <div id="speed">Loading...</div>
+  <form id="shortcut-form">
+    <div class="input-container">
+      <label for="shortcut-1">Speed Up</label>
+      <input type="text" name="shortcut-1" id="shortcut-1">
+    </div>
+    <div class="input-container">
+      <label for="shortcut-2">Speed Down</label>
+      <input type="text" name="shortcut-2" id="shortcut-2">
+    </div>
+    <div class="input-container">
+      <label for="shortcut-3">Toggle Picture-in-Picture</label>
+      <input type="text" name="shortcut-3" id="shortcut-3">
+    </div>
+    <div class="input-container">
+      <label for="shortcut-4">Toggle Suggestions</label>
+      <input type="text" name="shortcut-4" id="shortcut-4">
+    </div>
+    <button type="button" id="form-submit-button">Save Shortcuts</button>
+  </form>
+  <script src="popup.js"></script>
+</body>
+</html>
